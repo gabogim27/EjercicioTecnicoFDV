@@ -1,20 +1,24 @@
-﻿
-namespace EjercicioTecnicoFDV.Test
+﻿namespace EjercicioTecnicoFDV.Test
 {
     using NUnit.Framework;
     using System.Collections.Generic;
-    using EjercicioTecnicoFDV.Model;
+    using Model;
 
     [TestFixture]
     public class BikesRentTest
     {
+        private const decimal FamilyRentDiscount = 0.7m;
+        private const int ByHour = 5;
+        private const int ByDay = 20;
+        private const int ByWeek = 60;
+
         [Test]
         public void RentByHourForFiveHours()
         {
             var hourRent = new HourRent();
             hourRent.SetRentedPeriod(5);
 
-            Assert.IsTrue(hourRent.CalculateRent() == 5 * 5);
+            Assert.IsTrue(hourRent.CalculateRent() == 5 * ByHour);
         }
 
         [Test]
@@ -23,7 +27,7 @@ namespace EjercicioTecnicoFDV.Test
             var dayRent = new DayRent();
             dayRent.SetRentedPeriod(5);
 
-            Assert.IsTrue(dayRent.CalculateRent() == 5 * 20);
+            Assert.IsTrue(dayRent.CalculateRent() == 5 * ByDay);
         }
 
         [Test]
@@ -32,7 +36,7 @@ namespace EjercicioTecnicoFDV.Test
             var weekRent = new WeekRent();
             weekRent.SetRentedPeriod(5);
 
-            Assert.IsTrue(weekRent.CalculateRent() == 5 * 60);
+            Assert.IsTrue(weekRent.CalculateRent() == 5 * ByWeek);
         }
 
         [Test]
@@ -45,12 +49,13 @@ namespace EjercicioTecnicoFDV.Test
             var familyRent = new FamilyRent();
             var rentals = new List<Rental> { dayRent, hourRent, weekRent };
 
-
             familyRent.AddRentals(rentals);
+
+            var result = familyRent.CalculateRent();
 
             Assert.IsTrue(familyRent.Rentals.Count < 6);
             Assert.IsTrue(familyRent.Rentals.Count > 2);
-            Assert.IsTrue(familyRent.CalculateRent() == (20 * 5 + 5 * 5 + 60 * 5) * 0.7m);
+            Assert.IsTrue(result == (20 * 5 + 5 * 5 + 60 * 5) * FamilyRentDiscount);
         }
 
         [Test]
@@ -93,7 +98,6 @@ namespace EjercicioTecnicoFDV.Test
         [Test]
         public void AddZeroRentals_ToFamilyRental_ShouldThrowAnException()
         {
-
             var familyRent = new FamilyRent();
             var rentals = new List<Rental>();
 

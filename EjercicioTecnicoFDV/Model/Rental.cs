@@ -1,7 +1,7 @@
-﻿using EjercicioTecnicoFDV.Interfaces;
-
-namespace EjercicioTecnicoFDV.Model
+﻿namespace EjercicioTecnicoFDV.Model
 {
+    using Interfaces;
+
     public abstract class Rental : IRental
     {
         public decimal RentalPrice { get; set; }
