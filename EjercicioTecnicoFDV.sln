@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjercicioTecnicoFDV", "EjercicioTecnicoFDV\EjercicioTecnicoFDV.csproj", "{BDBC03C2-8744-4BCB-B3B6-9903852DC5E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjercicioTecnicoFDV.Test", "EjercicioTecnicoFDV.Test\EjercicioTecnicoFDV.Test.csproj", "{628CFCD6-F24B-47AC-A16A-339210B3A015}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDBC03C2-8744-4BCB-B3B6-9903852DC5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDBC03C2-8744-4BCB-B3B6-9903852DC5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDBC03C2-8744-4BCB-B3B6-9903852DC5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDBC03C2-8744-4BCB-B3B6-9903852DC5E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{628CFCD6-F24B-47AC-A16A-339210B3A015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{628CFCD6-F24B-47AC-A16A-339210B3A015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{628CFCD6-F24B-47AC-A16A-339210B3A015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{628CFCD6-F24B-47AC-A16A-339210B3A015}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {110ABCBA-6B5C-4467-AFD2-A92B3C6AE94A}
+	EndGlobalSection
+EndGlobal
