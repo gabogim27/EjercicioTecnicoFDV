@@ -5,7 +5,7 @@
 
     public class FamilyRent : Rental
     {
-        public List<Rental> Rentals { get; } = new List<Rental>();
+        public List<Rental> Rentals { get; set; } = new List<Rental>();
 
         public void AddRentals(List<Rental> rentals)
         {

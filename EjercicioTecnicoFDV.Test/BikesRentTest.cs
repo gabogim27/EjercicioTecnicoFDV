@@ -91,7 +91,6 @@
                 hourRent3
             };
 
-
             Assert.Throws<FamilyRentException>(() => familyRent.AddRentals(rentals));
         }
 
