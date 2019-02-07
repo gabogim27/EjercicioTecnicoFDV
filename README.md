@@ -57,4 +57,4 @@ I implemented an interface (IRental) to define a group of methods that my abstra
 
 Tests have a coverage of 93%. In order to get the same result you should use "Unit Test Coverage" from Resharper.
 
-
+![alt text](https://github.com/gabogim27/EjercicioTecnicoFDV/blob/master/Images/UnitTestCoverage.JPG)
